@@ -216,22 +216,14 @@
   padding: 4rem 0;
 }
 
-.p: {
-  padding: 1rem;
+.container > .card > img {
+  width: 100px;
+  height: 100px;
 }
 
-.p: {
-  padding: 1.5rem;
-}
-
-.p: {
-  padding: 2rem;
-}
-
-.p: {
-  padding: 3rem;
-}
-
-.p: {
-  padding: 4rem;
+/* Table formating */
+td, th {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
 }

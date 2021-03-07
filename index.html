@@ -7,6 +7,7 @@
   integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="./javascript/script.js"></script>
   <title>SilvHost | Tiwatope</title>
 </head>
 
@@ -14,12 +15,11 @@
   <!-- Nav Bar -->
   <div class="navbar">
     <div class="container flex">
-      <h1 class="logo">SilvHost.</h1>
+      <h1 class="logo"><b>CS Degree | User Testing Survey</b></h1>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="docs.html">Docs</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="https://odunet.github.io/CS_DEGREE_2021/" target="_blank">Sound App</a></li>
         </ul>
       </nav>
     </div>
@@ -28,21 +28,18 @@
   <section class="showcase">
     <div class="container grid">
       <div class="showcase-text">
-        <h1>Easier Deployment</h1>
+        <h1>User Testing | Introduction to Programming II</h1>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type
-          specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised
-          in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-          and more recently with desktop publishing software like Aldus PageMaker including
-          versions of Lorem Ipsum.
+          Questionnaires have long been used to evaluate user interfaces (<span><a href="http://hcibib.org/search:quest=C.CHI.83.83">Root & Draper, 1983</a></span>). 
+          Questionnaires have also long been used in electronic form (<span><a href="http://hcibib.org/search:quest=J.BRMIC.17.2.203">Perlman, 1985</a></span>). For a handful 
+          of questionnaires specifically designed to assess aspects of usability, the validity and/or
+          reliability have been established, including some in the following table, some of which are 
+          discussed in Chapter 6 of (<span><a href="http://hcibib.org/search:quest=B.Tullis.08">Tullis & Albert, 2008</a></span>).
         </p>
-        <a href="features.html" class="btn btn-outline">Read More</a>
+        <a href="https://garyperlman.com/quest/" target="_blank" class="btn btn-outline">Read More</a>
       </div>
       <div class="showcase-form card">
-        <h2>Request a Demo</h2>
+        <h2>Pre-register for final App release</h2>
         <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
           <input type="hidden" name="form-name" value="contact">
           <p class="hidden">
@@ -65,58 +62,121 @@
 <!-- Stats -->
 <section class="stats">
   <div class="container">
-    <h3 class="stats-heading text-center my-1">Many desktop publishing packages and
-       web page editors now use Lorem Ipsum as their default model text, and a search
-        for 'lorem ipsum' will uncover many web sites still in their infancy.</h3>
-    <div class="grid grid-3 text-center my-4">
-      <div>
-        <i class="fas fa-server fa-3x"></i>
-        <h3>10,349,405</h3>
-        <p class="text-secondary">
-          Deployments
-        </p>
-      </div>
-      <div>
-        <i class="fas fa-upload fa-3x"></i>
-        <h3>987 TB</h3>
-        <p class="text-secondary">
-          Published
-        </p>
-      </div>
-      <div>
-        <i class="fas fa-project-diagram fa-3x"></i>
-        <h3>2,343,265</h3>
-        <p class="text-secondary">
-          Projects
-        </p>
-      </div>
-    </div>
+    <h2 class="stats-heading text-center my-1"><b>Survey Question - Thank you for your time filling</b></h2>
+        <div class="showcase-form2 card">
+          <form name="Survey" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden">
+              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+            <div class="form-control">
+              <input type="text" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-control">
+              <input type="text" name="company" placeholder="Company Name" required>
+            </div>
+            <div class="form-control">
+              <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <table class="zebra">
+              <thead>
+                <tr>
+                  <th>Question</th>
+                  <th>Very Likely</th>
+                  <th>Likely</th>
+                  <th>Neutral</th>
+                  <th>Unlikely</th>
+                  <th>Very Unlikely</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+                <span>
+                <tr id="first">
+                  <td>Learning to operate the system would be easy for me</td>
+                  <td><input type="radio" id="1_0" name="first" value="vl"></td>
+                  <td><input type="radio" id="1_1" name="first" value="li"></td>
+                  <td><input type="radio" id="1_2" name="first" value="nu"></td>
+                  <td><input type="radio" id="1_3" name="first" value="ul"></td>
+                  <td><input type="radio" id="1_4" name="first" value="vul"></td>
+                </tr>
+                </span>
+                <span>
+                <tr id="second">
+                  <td>My interaction with the application would be clear and understandable</td>
+                  <td><input type="radio" id="2_0" name="second" value="vl"></td>
+                  <td><input type="radio" id="2_1" name="second" value="li"></td>
+                  <td><input type="radio" id="2_2" name="second" value="nu"></td>
+                  <td><input type="radio" id="2_3" name="second" value="ul"></td>
+                  <td><input type="radio" id="2_4" name="second" value="vul"></td>
+                </tr>
+                </span>
+                <tr id="third">
+                  <td>I would find the application easy to use</td>
+                  <td><input type="radio" id="3_0" name="third" value="vl"></td>
+                  <td><input type="radio" id="3_1" name="third" value="li"></td>
+                  <td><input type="radio" id="3_2" name="third" value="nu"></td>
+                  <td><input type="radio" id="3_3" name="third" value="ul"></td>
+                  <td><input type="radio" id="3_4" name="third" value="vul"></td>
+                </tr>
+                <tr id="forth">
+                  <td>I would find it easy to get the application to do what I want it to do</td>
+                  <td><input type="radio" id="4_0" name="forth" value="vl"></td>
+                  <td><input type="radio" id="4_1" name="forth" value="li"></td>
+                  <td><input type="radio" id="4_2" name="forth" value="nu"></td>
+                  <td><input type="radio" id="4_3" name="forth" value="ul"></td>
+                  <td><input type="radio" id="4_4" name="forth" value="vul"></td>
+                </tr>
+                <tr id="fifth">
+                  <td>It would be easy for me to become skillful at using the application</td>
+                  <td><input type="radio" id="5_0" name="fifth" value="vl"></td>
+                  <td><input type="radio" id="5_1" name="fifth" value="li"></td>
+                  <td><input type="radio" id="5_2" name="fifth" value="nu"></td>
+                  <td><input type="radio" id="5_3" name="fifth" value="ul"></td>
+                  <td><input type="radio" id="5_4" name="fifth" value="vul"></td>
+                </tr>
+                <tr id="sixth">
+                  <td>Using the system would enhance my enjoyment while listening to music</td>
+                  <td><input type="radio" id="6_0" name="sixth" value="vl"></td>
+                  <td><input type="radio" id="6_1" name="sixth" value="li"></td>
+                  <td><input type="radio" id="6_2" name="sixth" value="nu"></td>
+                  <td><input type="radio" id="6_3" name="sixth" value="ul"></td>
+                  <td><input type="radio" id="6_4" name="sixth" value="vul"></td>
+                </tr>
+                <tr id="seventh">
+                  <td>I would reccommend the application to other users</td>
+                  <td><input type="radio" id="7_0" name="seventh" value="vl"></td>
+                  <td><input type="radio" id="7_1" name="seventh" value="li"></td>
+                  <td><input type="radio" id="7_2" name="seventh" value="nu"></td>
+                  <td><input type="radio" id="7_3" name="seventh" value="ul"></td>
+                  <td><input type="radio" id="7_4" name="seventh" value="vul"></td>
+                </tr>
+                <tr id="eighth">
+                  <td>The application user interface will keep me using it longer</td>
+                  <td><input type="radio" id="8_0" name="eighth" value="vl"></td>
+                  <td><input type="radio" id="8_1" name="eighth" value="li"></td>
+                  <td><input type="radio" id="8_2" name="eighth" value="nu"></td>
+                  <td><input type="radio" id="8_3" name="eighth" value="ul"></td>
+                  <td><input type="radio" id="8_4" name="eighth" value="vul"></td>
+                </tr>
+                <tr id="ninth">
+                  <td>Reading characters on the screen is easy</td>
+                  <td><input type="radio" id="9_0" name="ninth" value="vl"></td>
+                  <td><input type="radio" id="9_1" name="ninth" value="li"></td>
+                  <td><input type="radio" id="9_2" name="ninth" value="nu"></td>
+                  <td><input type="radio" id="9_3" name="ninth" value="ul"></td>
+                  <td><input type="radio" id="9_4" name="ninth" value="vul"></td>
+                </tr>
+              </tbody>
+            </table>
+            <div data-netlify-recaptcha="true" class="form-control"></div>
+            <div class="surveyBtn">
+            <input type="submit" value="Send Response" class="btn btn-primary">
+            </div>
+          </form>
+        </div>
   </div>
-</section>
-<!-- CLI -->
-<section class="cli">
-  <div class="container grid">
-    <img src="images/cli.png" alt="" />
-    <div class="card">
-      <h3>Easy to use, crossplatform</h3>
-    </div>
-    <div class="card">
-      <h3>Deployed in seconds</h3>
-    </div>
-  </div>
-</section>
-<section class="cloud bg-primary my-2 py-2">
-  <div class="container grid">
-    <div class="text-center">
-      <h2 class="lg">Extreme Cloud Hosting</h2>
-      <p class="lead my-1">
-        Cloud hosting like you've never seen, Fast, Efficient
-        and Scalable
-      </p>
-      <a href="features.html" class="btn btn-dark">Read More</a>
-    </div>
-    <img src="images/cloud.png" alt="">
-  </div>
+  <br>
+  <hr style="width: 80%; margin: auto;">
 </section>
 <!-- Languages -->
 <section class="languages">
@@ -124,35 +184,23 @@
   <div class="container flex">
     <div class="card">
       <h4>Node.js</h4>
-      <img src="images/logos/node.png" alt="">
+      <img src="images/logos/cousera.jpeg" alt="cousera">
     </div>
     <div class="card">
       <h4>Clojure</h4>
-      <img src="images/logos/clojure.png" alt="">
+      <img src="images/logos/git.webp" alt="Git Hub">
     </div>
     <div class="card">
       <h4>Go</h4>
-      <img src="images/logos/go.png" alt="">
+      <img src="images/logos/p5.PNG" alt="PS.J5">
     </div>
     <div class="card">
       <h4>PHP</h4>
-      <img src="images/logos/php.png" alt="">
+      <img src="images/logos/netlify.png" alt="netlify">
     </div>
     <div class="card">
       <h4>Python</h4>
-      <img src="images/logos/python.png" alt="">
-    </div>
-    <div class="card">
-      <h4>Ruby</h4>
-      <img src="images/logos/ruby.png" alt="">
-    </div>
-    <div class="card">
-      <h4>Scala</h4>
-      <img src="images/logos/scala.png" alt="">
-    </div>
-    <div class="card">
-      <h4>C#</h4>
-      <img src="images/logos/csharp.png" alt="">
+      <img src="images/logos/gold.png" alt="Goldsmiths">
     </div>
   </div>
 </section>
@@ -160,9 +208,12 @@
 <footer class="footer bg-dark py-5">
   <div class="container grid grid-3">
     <div class="text-center">
-      <h1>SilvHost</h1>
+      <h3>Ayokunle O.</h3>
       <p>
-        Copyright &copy; 2020
+        Copyright &copy; 2021
+      </p>
+      <p>
+        Questionnaires sampled from <a href="https://garyperlman.com/quest/">Garyperlman</a>
       </p>
     </div>
     <nav class="text-center">
@@ -171,10 +222,7 @@
           <a href="index.html">Home</a>
         </li>
         <li class="m-2">
-          <a href="features.html">Features</a>
-        </li>
-        <li class="m-2">
-          <a href="docs.html">Docs</a>
+          <a href="https://odunet.github.io/CS_DEGREE_2021/" target="_blank">Sound App</a>
         </li>
       </ul>
     </nav>
