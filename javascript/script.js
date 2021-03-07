@@ -14,7 +14,7 @@ var radioResult = [];
 radioResult.push(["Question", "V-Likely", "Likely", "Nueral", "Unlikely", "V-Unlikely"]);
 
 //On click of a button, it takes the table and destructures in to rows
-surveySubmit.addEventListener("click", (e) => {
+surveySubmit.addEventListener("submit", (e) => {
     for (const property in tableBody.children) {
         if (typeof(tableBody.children[property]) != "function" && property != "length") { 
             var tableRow = tableBody.children[property];
