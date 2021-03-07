@@ -15,7 +15,6 @@ radioResult.push(["Question", "V-Likely", "Likely", "Nueral", "Unlikely", "V-Unl
 
 //On click of a button, it takes the table and destructures in to rows
 surveySubmit.addEventListener("submit", (e) => {
-    e.preventDefault();
     for (const property in tableBody.children) {
         if (typeof(tableBody.children[property]) != "function" && property != "length") { 
             var tableRow = tableBody.children[property];
@@ -67,4 +66,5 @@ surveySubmit.addEventListener("submit", (e) => {
         alert("Form submitted, thank you!")
     })
     .catch(err => console.log(err)); 
+    e.preventDefault();
 });
