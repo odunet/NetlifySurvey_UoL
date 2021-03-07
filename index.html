@@ -5,10 +5,12 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
   integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/style.css">
   <script defer src="./javascript/script.js"></script>
-  <title>SilvHost | Tiwatope</title>
+  <title>Survey | Introduction To Programming II</title>
 </head>
 
 <body>
@@ -70,7 +72,7 @@
               <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
             </p>
             <div class="form-control">
-              <input type="text" name="name" placeholder="Name" required>
+              <input id="surveyor" type="text" name="name" placeholder="Name" required>
             </div>
             <div class="form-control">
               <input type="text" name="company" placeholder="Company Name" required>
@@ -90,87 +92,83 @@
                 </tr>
               </thead>
               <tbody id="tableBody">
-                <span>
                 <tr id="first">
                   <td>Learning to operate the system would be easy for me</td>
-                  <td><label><input type="radio" id="1_0" name="first" value="vl"></label></td>
-                  <td><label><input type="radio" id="1_1" name="first" value="li"></label></td>
-                  <td><label><input type="radio" id="1_2" name="first" value="nu"></label></td>
-                  <td><label><input type="radio" id="1_3" name="first" value="ul"></label></td>
-                  <td><label><input type="radio" id="1_4" name="first" value="vul"></label></td>
+                  <td><input type="radio" id="1_0" name="first" value="vl"></td>
+                  <td><input type="radio" id="1_1" name="first" value="li"></td>
+                  <td><input type="radio" id="1_2" name="first" value="nu"></td>
+                  <td><input type="radio" id="1_3" name="first" value="ul"></td>
+                  <td><input type="radio" id="1_4" name="first" value="vul"></td>
                 </tr>
-                </span>
-                <span>
                 <tr id="second">
                   <td>My interaction with the application would be clear and understandable</td>
-                  <td><label><input type="radio" id="2_0" name="second" value="vl"></label></td>
-                  <td><label><input type="radio" id="2_1" name="second" value="li"></label></td>
-                  <td><label><input type="radio" id="2_2" name="second" value="nu"></label></td>
-                  <td><label><input type="radio" id="2_3" name="second" value="ul"></label></td>
-                  <td><label><input type="radio" id="2_4" name="second" value="vul"></label></td>
+                  <td><input type="radio" id="2_0" name="second" value="vl"></td>
+                  <td><input type="radio" id="2_1" name="second" value="li"></td>
+                  <td><input type="radio" id="2_2" name="second" value="nu"></td>
+                  <td><input type="radio" id="2_3" name="second" value="ul"></td>
+                  <td><input type="radio" id="2_4" name="second" value="vul"></td>
                 </tr>
-                </span>
                 <tr id="third">
                   <td>I would find the application easy to use</td>
-                  <td><label><input type="radio" id="3_0" name="third" value="vl"></label></td>
-                  <td><label><input type="radio" id="3_1" name="third" value="li"></label></td>
-                  <td><label><input type="radio" id="3_2" name="third" value="nu"></label></td>
-                  <td><label><input type="radio" id="3_3" name="third" value="ul"></label></td>
-                  <td><label><input type="radio" id="3_4" name="third" value="vul"></label></td>
+                  <td><input type="radio" id="3_0" name="third" value="vl"></td>
+                  <td><input type="radio" id="3_1" name="third" value="li"></td>
+                  <td><input type="radio" id="3_2" name="third" value="nu"></td>
+                  <td><input type="radio" id="3_3" name="third" value="ul"></td>
+                  <td><input type="radio" id="3_4" name="third" value="vul"></td>
                 </tr>
                 <tr id="forth">
                   <td>I would find it easy to get the application to do what I want it to do</td>
-                  <td><label><input type="radio" id="4_0" name="forth" value="vl"></label></td>
-                  <td><label><input type="radio" id="4_1" name="forth" value="li"></label></td>
-                  <td><label><input type="radio" id="4_2" name="forth" value="nu"></label></td>
-                  <td><label><input type="radio" id="4_3" name="forth" value="ul"></label></td>
-                  <td><label><input type="radio" id="4_4" name="forth" value="vul"></label></td>
+                  <td><input type="radio" id="4_0" name="forth" value="vl"></td>
+                  <td><input type="radio" id="4_1" name="forth" value="li"></td>
+                  <td><input type="radio" id="4_2" name="forth" value="nu"></td>
+                  <td><input type="radio" id="4_3" name="forth" value="ul"></td>
+                  <td><input type="radio" id="4_4" name="forth" value="vul"></td>
                 </tr>
                 <tr id="fifth">
                   <td>It would be easy for me to become skillful at using the application</td>
-                  <td><label><input type="radio" id="5_0" name="fifth" value="vl"></label></td>
-                  <td><label><input type="radio" id="5_1" name="fifth" value="li"></label></td>
-                  <td><label><input type="radio" id="5_2" name="fifth" value="nu"></label></td>
-                  <td><label><input type="radio" id="5_3" name="fifth" value="ul"></label></td>
-                  <td><label><input type="radio" id="5_4" name="fifth" value="vul"></label></td>
+                  <td><input type="radio" id="5_0" name="fifth" value="vl"></td>
+                  <td><input type="radio" id="5_1" name="fifth" value="li"></td>
+                  <td><input type="radio" id="5_2" name="fifth" value="nu"></td>
+                  <td><input type="radio" id="5_3" name="fifth" value="ul"></td>
+                  <td><input type="radio" id="5_4" name="fifth" value="vul"></td>
                 </tr>
                 <tr id="sixth">
                   <td>Using the system would enhance my enjoyment while listening to music</td>
-                  <td><label><input type="radio" id="6_0" name="sixth" value="vl"></label></td>
-                  <td><label><input type="radio" id="6_1" name="sixth" value="li"></label></td>
-                  <td><label><input type="radio" id="6_2" name="sixth" value="nu"></label></td>
-                  <td><label><input type="radio" id="6_3" name="sixth" value="ul"></label></td>
-                  <td><label><input type="radio" id="6_4" name="sixth" value="vul"></label></td>
+                  <td><input type="radio" id="6_0" name="sixth" value="vl"></td>
+                  <td><input type="radio" id="6_1" name="sixth" value="li"></td>
+                  <td><input type="radio" id="6_2" name="sixth" value="nu"></td>
+                  <td><input type="radio" id="6_3" name="sixth" value="ul"></td>
+                  <td><input type="radio" id="6_4" name="sixth" value="vul"></td>
                 </tr>
                 <tr id="seventh">
                   <td>I would reccommend the application to other users</td>
-                  <td><label><input type="radio" id="7_0" name="seventh" value="vl"></label></td>
-                  <td><label><input type="radio" id="7_1" name="seventh" value="li"></label></td>
-                  <td><label><input type="radio" id="7_2" name="seventh" value="nu"></label></td>
-                  <td><label><input type="radio" id="7_3" name="seventh" value="ul"></label></td>
-                  <td><label><input type="radio" id="7_4" name="seventh" value="vul"></label></td>
+                  <td><input type="radio" id="7_0" name="seventh" value="vl"></td>
+                  <td><input type="radio" id="7_1" name="seventh" value="li"></td>
+                  <td><input type="radio" id="7_2" name="seventh" value="nu"></td>
+                  <td><input type="radio" id="7_3" name="seventh" value="ul"></td>
+                  <td><input type="radio" id="7_4" name="seventh" value="vul"></td>
                 </tr>
                 <tr id="eighth">
                   <td>The application user interface will keep me using it longer</td>
-                  <td><label><input type="radio" id="8_0" name="eighth" value="vl"></label></td>
-                  <td><label><input type="radio" id="8_1" name="eighth" value="li"></label></td>
-                  <td><label><input type="radio" id="8_2" name="eighth" value="nu"></label></td>
-                  <td><label><input type="radio" id="8_3" name="eighth" value="ul"></label></td>
-                  <td><label><input type="radio" id="8_4" name="eighth" value="vul"></label></td>
+                  <td><input type="radio" id="8_0" name="eighth" value="vl"></td>
+                  <td><input type="radio" id="8_1" name="eighth" value="li"></td>
+                  <td><input type="radio" id="8_2" name="eighth" value="nu"></td>
+                  <td><input type="radio" id="8_3" name="eighth" value="ul"></td>
+                  <td><input type="radio" id="8_4" name="eighth" value="vul"></td>
                 </tr>
                 <tr id="ninth">
                   <td>Reading characters on the screen is easy</td>
-                  <td><label><input type="radio" id="9_0" name="ninth" value="vl"></label></td>
-                  <td><label><input type="radio" id="9_1" name="ninth" value="li"></label></td>
-                  <td><label><input type="radio" id="9_2" name="ninth" value="nu"></label></td>
-                  <td><label><input type="radio" id="9_3" name="ninth" value="ul"></label></td>
-                  <td><label><input type="radio" id="9_4" name="ninth" value="vul"></label></td>
+                  <td><input type="radio" id="9_0" name="ninth" value="vl"></td>
+                  <td><input type="radio" id="9_1" name="ninth" value="li"></td>
+                  <td><input type="radio" id="9_2" name="ninth" value="nu"></td>
+                  <td><input type="radio" id="9_3" name="ninth" value="ul"></td>
+                  <td><input type="radio" id="9_4" name="ninth" value="vul"></td>
                 </tr>
               </tbody>
             </table>
             <div data-netlify-recaptcha="true" class="form-control"></div>
             <div class="surveyBtn">
-            <input type="submit" value="Send Response" class="btn btn-primary">
+            <input type="submit" id="surveySubmit" value="Send Response" class="btn btn-primary">
             </div>
           </form>
         </div>
