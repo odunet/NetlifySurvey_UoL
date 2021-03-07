@@ -120,7 +120,7 @@ code, pre {
 .showcase-form2{
   margin: auto;
   margin-top: 10px;
-  height: 1000px;
+  height: 1100px;
   width: 80%;
   padding: 40px;
   padding-top: 10px;
@@ -168,7 +168,6 @@ code, pre {
 .surveyBtn {
   float: right;
   padding: 10px;
-  /* margin-top: 10px; */
 }
 
 /* stats */
