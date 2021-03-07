@@ -1,14 +1,3 @@
-//Initialize radio objects
-var radio1 = document.getElementById("first");
-var radio2 = document.getElementById("second");
-var radio3 = document.getElementById("third");
-var radio4= document.getElementById("forth");
-var radio5 = document.getElementById("fifth");
-var radio6 = document.getElementById("sixth");
-var radio7 = document.getElementById("seventh");
-var radio8 = document.getElementById("eight");
-var radio9 = document.getElementById("ninth");
-
 //Initialize name of survey participant
 var surveyor = document.getElementById("surveyor");
 
@@ -26,7 +15,6 @@ radioResult.push(["Question", "V-Likely", "Likely", "Nueral", "Unlikely", "V-Unl
 
 //On click of a button, it takes the table and destructures in to rows
 surveySubmit.addEventListener("click", (e) => {
-    e.preventDefault();
     for (const property in tableBody.children) {
         if (typeof(tableBody.children[property]) != "function" && property != "length") { 
             var tableRow = tableBody.children[property];
@@ -74,6 +62,7 @@ surveySubmit.addEventListener("click", (e) => {
 
     // Displaying results to console 
     .then(json => {
-        console.log(json)
-    }); 
+        console.log(JSON.stringify(json));
+    })
+    .catch(err => console.log(err)); 
 });
